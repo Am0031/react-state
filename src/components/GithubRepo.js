@@ -43,16 +43,19 @@ export const GithubRepo = () => {
     <div style={{ marginLeft: "2rem" }}>
       <h1>Public repos by user - **This page is managed with useState**</h1>
 
-      <form onSubmit={onSubmit}>
-        <input
-          style={{ width: "400px" }}
-          id="search-input"
-          value={username}
-          placeholder="Enter github username"
-          onChange={handleChange}
-        ></input>
-        <button id="submit-btn">Search</button>
-      </form>
+      <div>
+        <h2>Search form</h2>
+        <form onSubmit={onSubmit}>
+          <input
+            style={{ width: "400px" }}
+            id="search-input"
+            value={username}
+            placeholder="Enter github username"
+            onChange={handleChange}
+          ></input>
+          <button id="submit-btn">Search</button>
+        </form>
+      </div>
       <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
         <div
           style={{
@@ -81,7 +84,7 @@ export const GithubRepo = () => {
           )}
         </div>
         <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-          <h2>Details for this repo</h2>
+          <h2>Details for selected repo</h2>
           {selectedRepo && (
             <>
               <h3>{selectedRepo.name}</h3>
