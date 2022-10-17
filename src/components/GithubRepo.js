@@ -40,11 +40,12 @@ export const GithubRepo = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginLeft: "2rem" }}>
       <h1>Public repos by user - **This page is managed with useState**</h1>
 
       <form onSubmit={onSubmit}>
         <input
+          style={{ width: "400px" }}
           id="search-input"
           value={username}
           placeholder="Enter github username"
