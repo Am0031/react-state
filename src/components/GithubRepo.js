@@ -41,7 +41,8 @@ export const GithubRepo = () => {
 
   return (
     <div>
-      <h1>Public repos by user</h1>
+      <h1>Public repos by user - **This page is managed with useState**</h1>
+
       <form onSubmit={onSubmit}>
         <input
           id="search-input"
